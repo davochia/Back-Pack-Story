@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+
+ion-header{
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.logo-icon{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: inherit;
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo-icon:hover{
+    cursor: pointer;
+}
+
+.btn{
+    color: whitesmoke;
+}
+
+.btn button:hover{
+    border-top: 3px solid whitesmoke;
+    cursor: pointer;
+    -webkit-transform: scale(1.2); 
+}
+
+.login-out a:hover{
+    text-decoration: none;
+    color: cyan;
+    -webkit-transform: scale(1.1); 
+    
+}

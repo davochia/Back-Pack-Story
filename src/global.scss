@@ -24,3 +24,52 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Angular material theme */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css'; 
+
+/* Bootstrap5 import */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.flex-spacer{
+    flex: 1 1 auto;
+}
+
+.overlay-dark {
+    position: relative;
+  }
+  
+  .overlay-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    display: block;
+    opacity: 0.25;
+  }
+
+  .overlay-darker {
+    position: relative;
+  }
+  
+  .overlay-darker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    display: block;
+    opacity: 0.65;
+  }
+  
+  
+  .overlay-content {
+    z-index: 99;
+    position: relative;
+  }

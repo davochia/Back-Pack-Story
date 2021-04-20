@@ -1,0 +1,29 @@
+@import '../../shared/styles/mixins';
+@import '../../shared/styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+
+.jumbotron {
+  @include zero-margin(400px, 40px);
+  background: url("../../../assets/img/zakinthos.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $text-icon;
+  position: relative;
+  height: 600px;
+  min-height: 150px;
+}
+
+.jumbotron h1 {
+  font-size: 70px;
+  line-height: 4rem;
+  font-family: 'Coda Caption', sans-serif;
+}
+
+.jumbotron p {
+  font-size: large;
+  line-height: 2rem;
+}
+
+.h1-ml{
+  margin-left: 6rem;
+}
