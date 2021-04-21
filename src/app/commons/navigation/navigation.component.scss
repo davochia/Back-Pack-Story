@@ -14,11 +14,13 @@ ion-header{
     font-size: 2rem;
     font-weight: bolder;
     color: inherit;
+    margin-left: 5rem;
     font-family: 'Dancing Script', cursive;
 }
 
 .logo-icon:hover{
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn{

@@ -1,0 +1,87 @@
+<mat-toolbar class="mb-4">
+  <span>Login</span>
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+<ion-content  >
+  <form
+  novalidate
+  [formGroup]="loginFormGroup"
+  (ngSubmit)="onSubmit()"
+>
+
+  <div class="col-auto mb-3">
+    <ion-label  for="email" class="form-label">Email</ion-label >
+    <ion-input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="name@example.com"
+      required
+    ></ion-input>
+  </div>
+
+  <div class="col-auto mb-3">
+    <ion-label  for="phone" class="form-label">Password</ion-label >
+    <ion-input
+      formControlName="password"
+      type="password"
+      class="form-control"
+      id="password"
+      placeholder="password"
+      required
+    ></ion-input>
+  </div>
+
+  <div class="col-auto">
+    <button
+      type="submit"
+      class="btn btn-primary text-floral-white mb-3"
+      [disabled]="loginFormGroup.invalid"
+    >
+      Login
+    </button>
+  </div>
+</form>
+</ion-content>
+
+
+<!-- 
+<ion-content>
+  <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input
+          formControlName="email"
+          name="email"
+          required
+          type="email"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password:</ion-label>
+        <ion-input
+          formControlName="password"
+          name="password"
+          required
+          type="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-checkbox slot="end" formControlName="remember"> </ion-checkbox>
+        <ion-label >Remember Me:</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <div padding class="d-flex justify-content-end">
+      <button block class="btn btn-primary" type="submit" [disabled]="!loginFormGroup.valid" >
+        Login
+      </button>
+    </div>
+  </form>
+</ion-content> -->

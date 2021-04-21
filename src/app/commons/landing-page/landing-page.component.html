@@ -1,3 +1,18 @@
+<!-- <ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+</ion-content> -->
+
+
 <div
   class="jumbotron overlay-dark"
   fxLayout="column"
@@ -7,15 +22,28 @@
   fxLayoutAlign.sm="start center"
   fxLayoutAlign.gt-sm="center end"
 >
-  <div class="overlay-content" fxFlex>
-   <div class="d-flex flex-column ">
-    <h1 class="display-4 text-center">MEMORABLE</h1>
-    <h1 class="display-4 text-center h1-ml">EXPERIENCES</h1>
-   </div>
+  <div class="overlay-content">
+    <div class="form-outline">
+      <input
+        type="search"
+        id="form1"
+        class="form-control mb-3 mx-auto"
+        placeholder="Search"
+        aria-label="Search"
+        style="background: transparent; width: 50%"
+      />
+    </div>
 
-    <p class="lead text-center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue finibus massa ac venenatis. Cras quis vestibulum nulla, vitae pharetra mauris. 
-    </p>
+    <div class="d-flex flex-column">
+      <h1 class="display-4 text-center">MEMORABLE</h1>
+      <h1 class="display-4 text-center h1-ml">EXPERIENCES</h1>
+    </div>
+
+    <!-- <p class="lead text-center">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      congue finibus massa ac venenatis. Cras quis vestibulum nulla, vitae
+      pharetra mauris.
+    </p> -->
     <p class="text-center">
       <a
         href=""

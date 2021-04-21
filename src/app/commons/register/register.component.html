@@ -1,0 +1,88 @@
+
+<mat-toolbar class="mb-4">
+  <span>Register</span>
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+
+<ion-content>
+  <form
+  novalidate
+  [formGroup]="registerFormGroup"
+  #fform="ngForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="col-auto mb-3">
+    <ion-label for="name" class="form-label">First Name</ion-label >
+    <ion-input
+      formControlName="firstName"
+      type="text"
+      class="form-control"
+      id="firstName"
+      placeholder="John H."
+    ></ion-input>
+    <mat-error *ngIf="formErrors.firstName">{{ formErrors.firstName }}</mat-error>
+  </div>
+
+  <div class="col-auto mb-3">
+    <ion-label for="name" class="form-label">Last Name</ion-label >
+    <ion-input
+      formControlName="lastName"
+      type="text"
+      class="form-control"
+      id="lastName"
+      placeholder="Smith"
+    ></ion-input>
+    <mat-error *ngIf="formErrors.lastName">{{ formErrors.lastName }}</mat-error>
+  </div>
+
+  <div class="col-auto mb-3">
+    <ion-label  for="email" class="form-label">Email</ion-label >
+    <ion-input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="name@example.com"
+    ></ion-input>
+    <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
+  </div>
+
+  <div class="col-auto mb-3">
+    <ion-label  for="phone" class="form-label">Phone</ion-label >
+    <ion-input
+      formControlName="phone"
+      type="tel"
+      class="form-control"
+      id="phone"
+      placeholder="+1234567890"
+      
+    ></ion-input>
+    <mat-error *ngIf="formErrors.phone">{{ formErrors.phone }}</mat-error>
+  </div>
+
+
+  <div class="col-auto mb-3">
+    <ion-label  for="address" class="form-label">Address</ion-label >
+    <ion-input
+      formControlName="message"
+      class="form-control"
+      id="address"
+      rows="12"
+      required
+    ></ion-input>
+    <mat-error *ngIf="formErrors.address">{{ formErrors.address }}</mat-error>
+  </div>
+
+  <div class="col-auto">
+    <button
+      type="submit"
+      class="btn btn-primary text-floral-white mb-3"
+      [disabled]="registerFormGroup.invalid"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+</ion-content>

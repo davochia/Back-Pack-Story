@@ -1,7 +1,106 @@
-<ion-header>
+
+<!-- class="ion-no-border " -->
+
+ <ion-header class="ion-navbar">
+
+ <a class="logo-icon" routerLink="/">Backpack Story</a>
+
+ <span class="flex-spacer"></span>
+
+  <div class="d-flex btn mx-auto justify-content-center">
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['home']">Home</button>
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['#']">About</button>
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['#']" #menuTrigger="matMenuTrigger"
+      [matMenuTriggerFor]="tours">Tours</button>
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['#']" #menuTrigger="matMenuTrigger"
+      [matMenuTriggerFor]="services">Services</button>
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['#']" #menuTrigger="matMenuTrigger"
+      [matMenuTriggerFor]="pages">Pages</button>
+    <button mat-button class="h5" routerLinkActive="active" [routerLink]="['#']">Contact</button>
+
+  </div>
+
+
+  <mat-menu #tours="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="tour1">Tour1</button>
+    <button mat-menu-item [matMenuTriggerFor]="tour2">Tour2</button>
+  </mat-menu>
+
+  <mat-menu #tour1="matMenu">
+    <button mat-menu-item>Tour Safari</button>
+    <button mat-menu-item>Tour Sea</button>
+  </mat-menu>
+
+  <mat-menu #tour2="matMenu">
+    <button mat-menu-item>Tour</button>
+    <button mat-menu-item>Tour</button>
+  </mat-menu>
+
+  <mat-menu #services="matMenu">
+    <button mat-menu-item>Service 1</button>
+    <button mat-menu-item>Service 2</button>
+    <button mat-menu-item>Service 3</button>
+  </mat-menu>
+
+  <mat-menu #pages="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="page1">page 1</button>
+    <button mat-menu-item [matMenuTriggerFor]="page2">page 2</button>
+    <button mat-menu-item [matMenuTriggerFor]="page3">page 3</button>
+
+  </mat-menu>
+
+  <mat-menu #page1="matMenu">
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+  </mat-menu>
+
+  <mat-menu #page2="matMenu">
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+  </mat-menu>
+
+  <mat-menu #page3="matMenu">
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+    <button mat-menu-item>page </button>
+  </mat-menu>
+
+
+  <span class="flex-spacer"></span>
+
+
+  <div class="login-out">
+
+    <div class="justify-item-center mr-5">
+      <a mat-button (click)="openLogin()">
+        <span>
+          <ion-icon name="log-in-outline"></ion-icon>
+        </span> Login
+      </a>
+
+      <a mat-button (click)="openRegister()"><span>
+          <ion-icon name="add"></ion-icon>
+        </span> Register</a>
+    </div>
+
+    <ng-template>
+      <a mat-button>
+        <ion-icon name="log-out-outline"></ion-icon> Logout
+      </a>
+    </ng-template>
+  </div>
+
+</ion-header>
+
+
+
+<!-- <ion-header>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand logo-icon pl-5" routerLink="/">Backpack Story</a>
+      
+      <a class="navbar-brand logo-icon" routerLink="/">Backpack Story</a>
 
       <span class="flex-spacer"></span>
 
@@ -136,7 +235,7 @@
 
         <span class="flex-spacer"></span>
 
-        <div class="justify-item-center ogin-out">
+        <div class="justify-item-center login-out">
           <a mat-button>
             <span>
               <ion-icon name="log-in-outline"></ion-icon>
@@ -160,99 +259,5 @@
       </div>
     </div>
   </nav>
-</ion-header>
+</ion-header> -->
 
-<!-- class="ion-no-border " -->
-<!-- <ion-header class="ion-navbar">
-
-  <mat-icon aria-hidden="false"><a class=" navbar-brand logo-icon pl-5" routerLink="/">Backpack Story</a></mat-icon>
-
-  <div class="d-flex btn mx-auto justify-content-center">
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['home']">Home</button>
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['about']">About</button>
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['tours']" #menuTrigger="matMenuTrigger"
-      [matMenuTriggerFor]="tours">Tours</button>
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['service']" #menuTrigger="matMenuTrigger"
-      [matMenuTriggerFor]="services">Services</button>
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['pages']" #menuTrigger="matMenuTrigger"
-      [matMenuTriggerFor]="pages">Pages</button>
-    <button mat-button class="h5" routerLinkActive="active" [router-outlet]="['contact']">Contact</button>
-
-  </div>
-
-
-  <mat-menu #tours="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="tour1">Tour1</button>
-    <button mat-menu-item [matMenuTriggerFor]="tour2">Tour2</button>
-  </mat-menu>
-
-  <mat-menu #tour1="matMenu">
-    <button mat-menu-item>Tour Safari</button>
-    <button mat-menu-item>Tour Sea</button>
-  </mat-menu>
-
-  <mat-menu #tour2="matMenu">
-    <button mat-menu-item>Tour</button>
-    <button mat-menu-item>Tour</button>
-  </mat-menu>
-
-  <mat-menu #services="matMenu">
-    <button mat-menu-item>Service 1</button>
-    <button mat-menu-item>Service 2</button>
-    <button mat-menu-item>Service 3</button>
-  </mat-menu>
-
-  <mat-menu #pages="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="page1">page 1</button>
-    <button mat-menu-item [matMenuTriggerFor]="page2">page 2</button>
-    <button mat-menu-item [matMenuTriggerFor]="page3">page 3</button>
-
-  </mat-menu>
-
-  <mat-menu #page1="matMenu">
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-  </mat-menu>
-
-  <mat-menu #page2="matMenu">
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-  </mat-menu>
-
-  <mat-menu #page3="matMenu">
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-    <button mat-menu-item>page </button>
-  </mat-menu>
-
-
-  <span class="flex-spacer"></span>
-
-
-  <div class="login-out">
-
-    <div class="justify-item-center ">
-      <a mat-button>
-        <span>
-          <ion-icon name="log-in-outline"></ion-icon>
-        </span> Login
-      </a>
-
-      <a mat-button><span>
-          <ion-icon name="add"></ion-icon>
-        </span> Register</a>
-    </div>
-
-    <ng-template>
-      <a mat-button>
-        <ion-icon name="log-out-outline"></ion-icon> Logout
-      </a>
-    </ng-template>
-  </div>
-
-
-</ion-header>
-
- -->
